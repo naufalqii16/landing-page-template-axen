@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukan CV-mu yang Jelek. Portofolio-mu yang Membosankan.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- COUNTDOWN HEADER -->
+    <div class="header">
+        <div class="countdown-bar">
+            ⚡ FLASH SALE BERAKHIR DALAM: 
+            <span class="timer" id="hours">00</span>:
+            <span class="timer" id="minutes">00</span>:
+            <span class="timer" id="seconds">00</span>
+            ⚡
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- <div class="eyebrow">🔥 STOP MENYALAHKAN DIRI KAMU</div> -->
+            
+            <!-- <h1>
+               KAMU BUKAN KURANG SKILL.<br>
+                <span class="highlight">Portofolio-mu yang Membosankan.</span>
+            </h1>
+
+            <p class="subheadline">
+                Kamu udah belajar. Udah bikin project. Udah nambahin sertifikat. Udah revisi CV berkali-kali.<br>
+                Tapi hasilnya sama: <strong>di-skip HR.</strong><br><br>
+                Masalahnya bukan di skill kamu.<br>
+                Masalahnya… <strong>kamu nggak cukup menarik dalam 3 detik pertama.</strong>
+            </p> -->
+
+            <h1>
+                BIKIN PORTOFOLIO PROFESIONAL YANG BIKIN HR NOTICE KAMU<br>
+                <span class="highlight">CUMA DALAM 6 DETIK PERTAMA</span>
+            </h1>
+
+            <p class="subheadline">
+                Jangan-jangan bukan skill kamu yang kurang, tapi cara kamu pamerin skillnya. Ubah portfolio biasa jadi kelihatan mahal, niat, dan layak dipilih.
+            </p>
+
+            <div style="text-align:center; margin:60px 0;">
+                <img src="images/mockup.jpeg" style="max-width:100%; border:3px solid var(--accent); box-shadow:0 0 40px rgba(0,255,65,0.2);">
+            </div>
+
+            <div class="cta-container">
+                <button class="cta-button" onclick="handleCTA()">
+                    <span>GUE MAU DILIRIK HR →</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTRARIAN SECTION -->
+    <section class="contrarian-section">
+    <div class="container">
+        <h2 class="section-title">
+            REALITA PAHIT<br>
+            <span style="color: var(--warning);">PERSAINGAN NYARI KERJA MAKIN GILA</span>
+        </h2>
+
+        <!-- NEW KILLER COPY -->
+        <div style="max-width: 800px; margin: 0 auto 60px; text-align: center; font-size: 20px; line-height: 1.6; color: #cccccc;">
+
+            <p style="margin-bottom: 20px;">
+                <strong style="color: var(--white);">Sekarang 1 lowongan = ratusan pelamar dalam hitungan hari.</strong><br>
+                Bukan bulan. Bukan minggu. <span style="color: var(--warning);">Hari.</span>
+            </p>
+
+            <p style="margin-bottom: 20px;">
+                Dan yang lebih parah…
+            </p>
+
+            <p style="margin-bottom: 20px;">
+                <strong>80% dari mereka punya background yang mirip kayak lo.</strong><br>
+                Skill mirip. Sertifikat mirip. Project mirip.
+            </p>
+
+        </div>
+
+        <!-- IMAGE SLIDER -->
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+
+                <div class="slide">
+                    <img src="images/jobstreet_1.png">
+                </div>
+
+                <div class="slide">
+                    <img src="images/jobstreet_2.png">
+                </div>
+
+                <div class="slide">
+                    <img src="images/jobstreet_3.png">
+                </div>
+
+                <div class="slide">
+                    <img src="images/jobstreet_4.png">
+                </div>
+
+                <div class="slide">
+                    <img src="images/job_linkedin_1.png">
+                </div>
+
+                <div class="slide">
+                    <img src="images/job_linkedin_2.png">
+                </div>
+
+                <div class="slide">
+                    <img src="images/job_linkedin_3.png">
+                </div>
+
+            </div>
+
+            <button class="slider-btn left" onclick="moveSlide(-1)">‹</button>
+            <button class="slider-btn right" onclick="moveSlide(1)">›</button>
+        </div>
+
+        <!-- FINAL PUNCH -->
+        <div style="max-width: 800px; margin: 60px auto 0; text-align: center; font-size: 20px; line-height: 1.6;">
+            <p style="margin-bottom: 20px;">
+                Itu semua fresh post.<br>
+                Belum seminggu.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+                Artinya?
+            </p>
+
+            <p>
+                <strong style="color: var(--white);">Kalau HR nggak notice lo di 6 detik pertama…</strong><br>
+                <span style="color: var(--warning);">skill lo yang berharga itu nggak bakalan dianggep.</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- FINAL CTA -->
+     <section style="padding:100px 10px; text-align:center;">
+        <div class="container">
+
+            <h2 class="section-title">
+                SOLUSINYA BUKAN CUMA TAMBAH SKILL<br>
+                <span style="color: var(--accent);">TAPI BENERIN CARA LO PAMERIN SKILLNYA</span>
+            </h2>
+
+            <p style="max-width:700px; margin:30px auto; font-size:20px; color:#ccc;">
+
+                HR gak punya waktu buat “menemukan potensi lo”.<br><br>
+
+                Mereka cuma lihat sekilas… lalu mutusin.<br><br>
+
+                <strong style="color:white;">
+                    Jadi kalau dalam beberapa detik pertama lo nggak keliatan “berbeda” —
+                    lo langsung hilang.
+                </strong><br><br>
+
+                Dan ini yang gak pernah diajarin di bootcamp manapun:<br><br>
+
+                <span style="color: var(--accent); font-weight:600;">
+                    gimana cara bikin skill lo keliatan mahal, niat, dan layak dipilih.
+                </span>
+
+            </p>
+
+        </div>
+    </section>
+    <section style="padding:1px 20px; background:#0a0a0a;">
+
+        <div class="container">
+
+            <!-- <h2 class="section-title">
+                BAYANGIN<br>
+                <span style="color: var(--accent);">INI BENTUK PORTOFOLIO LO NANTI</span>
+            </h2> -->
+
+            <p style="max-width:700px; margin:30px auto; font-size:20px; color:#ccc; text-align:center;">
+                Coba bayangin...<br>
+                <!-- Tapi cara lo “terlihat” masih kalah.<br><br> -->
+
+                <strong style="color:white;">
+                    Semua skill dan pengalaman lo dipamerin dengan cara begini.
+                </strong>
+            </p>
+
+            <!-- MOCKUP UTAMA -->
+            <div style="text-align:center; margin:60px 0;">
+                <img src="images/mockup.jpeg" style="max-width:100%; border:3px solid var(--accent); box-shadow:0 0 40px rgba(0,255,65,0.2);">
+            </div>
+
+            <p style="text-align:center; font-size:18px; color:#999;">
+                Klik salah satu → lihat langsung gimana HR bakal ngeliat lo
+            </p>
+
+            <!-- CARD PORTFOLIO -->
+            <div class="portfolio-grid">
+
+                <!-- CARD 1 -->
+                <div class="portfolio-card" onclick="window.open('https://jeong.axen.software/')">
+                    <img src="images/mockup.jpeg">
+                    <h3>BRUTALIST STYLE</h3>
+                    <p>
+                        Buat lo yang pengen keliatan bold, beda, dan langsung “nabrak” perhatian HR.
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="portfolio-card" onclick="window.open('https://jeong.axen.software/')">
+                    <img src="images/mockup.jpeg">
+                    <h3>CLEAN PROFESSIONAL</h3>
+                    <p>
+                        Buat lo yang main aman, tapi tetap keliatan high-quality dan niat.
+                    </p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="portfolio-card" onclick="window.open('https://jeong.axen.software/')">
+                    <img src="images/mockup.jpeg">
+                    <h3>MODERN MINIMAL</h3>
+                    <p>
+                        Simpel tapi tajam. Fokus ke impact dan storytelling, bukan dekorasi.
+                    </p>
+                </div>
+
+            </div>
+
+            <p style="text-align:center; margin-top:50px; font-size:20px;">
+                <strong style="color: var(--warning);">
+                    Pilih gaya lo. Bukan cuma apply… tapi bikin mereka berhenti scroll.
+                </strong>
+            </p>
+
+        </div>
+
+    </section>
+    <section style="padding:100px 20px; background:#0a0a0a; border-top:4px solid var(--accent);">
+    <div class="container" style="max-width:800px;">
+
+        <h2 class="section-title">
+            PASTIKAN PRODUK INI COCOK UNTUK KAMU
+        </h2>
+
+        <!-- <p style="text-align:center; font-size:20px; color:#ccc; margin-bottom:60px;">
+            Gue lebih milih lo gak beli…<br>
+            daripada beli tapi gak kepake.
+        </p> -->
+
+        <!-- COCOK -->
+        <div style="margin-bottom:60px;">
+            <h3 style="color: var(--accent); font-size:28px; margin-bottom:20px;">
+                ✔️ Beli jika:
+            </h3>
+
+            <ul style="line-height:1.8; font-size:18px; color:#ccc;">
+                <li>Kamu udah punya skill… tapi capek gak pernah dilirik</li>
+                <li>Kamu ngerasa CV & portfolio Kamu “biasa aja”</li>
+                <li>Kamu sadar kompetisi makin brutal, dan Kamu gak bisa main cara lama</li>
+                <li>Kamu pengen keliatan lebih “niat” tanpa harus nambah 10 project lagi</li>
+                <li>Kamu pengen HR langsung mikir: <strong style="color:white;">“ini orang beda”</strong></li>
+            </ul>
+        </div>
+
+        <!-- TIDAK COCOK -->
+        <div>
+            <h3 style="color: var(--warning); font-size:28px; margin-bottom:20px;">
+                ❌Jangan beli jika:
+            </h3>
+
+            <ul style="line-height:1.8; font-size:18px; color:#ccc;">
+                <li>Kamu masih mikir “yang penting apply sebanyak mungkin”</li>
+                <li>Kamu ngerasa tampilan gak penting, yang penting skill aja</li>
+                <li>Kamu nyaman jadi kandidat ke-50 yang diabaikan</li>
+                <li>Kamu gak siap invest sedikit buat keliatan jauh lebih mahal</li>
+                <li>Kamu berharap HR bakal “menemukan potensi Kamu sendiri”</li>
+            </ul>
+        </div>
+
+        <!-- CLOSING -->
+        <!-- <p style="text-align:center; margin-top:60px; font-size:20px;">
+            <strong style="color:white;">
+                Kalau lo ngerasa masuk yang atas…
+            </strong><br>
+            <span style="color: var(--accent);">
+                berarti ini bukan optional lagi. Ini kebutuhan.
+            </span>
+        </p> -->
+
+    </div>
+</section>
+     <section class="social-proof" style="background: var(--dark); border-top: 4px solid var(--accent); padding: 80px 20px;">
+        <div class="container" style="max-width: 600px; margin: 0 auto;">
+            <h2 class="section-title" style="color: var(--accent); margin-bottom: 40px; font-size: clamp(32px, 5vw, 60px);">
+                VALUE YANG LO DAPET
+            </h2>
+            
+            <div class="price-box" style="margin-bottom: 40px;">
+                <div class="discount-badge">SAVE<br>58%</div>
+                
+                <ul class="value-list">
+                    <li class="value-item">
+                        <span class="value-name">Standout Portfolio System™</span>
+                        <span class="value-price">Rp 499.000</span>
+                    </li>
+
+                    <li class="value-item">
+                        <span class="value-name">Done-For-You Setup & Publishing</span>
+                        <span class="value-price">Rp 299.000</span>
+                    </li>
+
+                    <li class="value-item">
+                        <span class="value-name">ATS CV Optimization Framework</span>
+                        <span class="value-price">Rp 249.000</span>
+                    </li>
+
+                    <li class="value-item">
+                        <span class="value-name">High-Conversion Personal Branding Copy</span>
+                        <span class="value-price">Rp 199.000</span>
+                    </li>
+                </ul>
+
+                <div class="value-total">
+                    <span>Total Value:</span>
+                    <span style="color: var(--warning); text-decoration: line-through;">Rp 1.246.000</span>
+                </div>
+
+                
+
+                <div style="text-align: center; border-top: 2px dashed rgba(255,255,255,0.2); padding-top: 30px;">
+                    <div class="price-label" style="color: var(--accent); font-weight: bold;">HARI INI LO CUMA BAYAR</div>
+                    <div class="new-price" style="font-size: 72px; margin: 10px 0;">199K</div>
+                    <div class="savings">⚠️ Sisa <span id="final-spots">7</span> slot hari ini</div>
+                </div>
+            </div>
+
+            <button class="cta-button" onclick="handleCTA()" style="width: 100%;">
+                <span>🔥 AMBIL SEKARANG →</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="final-cta-title">
+                Setiap Hari Kamu Delay = <br>
+                <span style="color: var(--warning);">Kompetitor Udah Apply Duluan</span>
+            </h2>
+
+            <p class="final-cta-text">
+
+                Lo bisa lanjut kayak sekarang:<br>
+                apply sana-sini, nunggu, dan diabaikan.<br><br>
+
+                Atau lo bisa ubah cara lo dilihat…<br>
+                mulai dari sekarang.<br><br>
+
+                <strong style="color:white;">
+                    Karena di market kayak sekarang,<br>
+                    yang biasa = gak ada.
+                </strong>
+
+            </p>
+
+            <div class="cta-container" style="margin: 0 auto;">
+                <div class="price-box">
+                    <div class="discount-badge">SAVE<br>50%</div>
+                    <div class="price-label">Flash Sale — Berakhir Malam Ini</div>
+                    <div class="price-comparison">
+                        <div class="old-price">Rp 1.246.000</div>
+                        <div class="new-price">199K</div>
+                    </div>
+                    <div class="savings">⚠️ HANYA UNTUK <span id="final-spots">50</span> ORANG PERTAMA HARI INI</div>
+                </div>
+
+                <button class="cta-button" onclick="handleCTA()">
+                    <span>🔥 CLAIM DISKON 50% SEKARANG</span>
+                </button>
+
+                <!-- <div class="guarantee">
+                    <strong>BONUS:</strong> Template CV ATS-Friendly senilai 99K — GRATIS untuk 7 orang pertama! 🎁
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE NOTIFICATION -->
+    <div class="live-notification" id="liveNotification">
+        <div class="notification-header">
+            <div class="live-dot"></div>
+            <strong style="font-size: 11px; text-transform: uppercase;">BARU SAJA DIBELI</strong>
+        </div>
+        <div class="notification-text">
+            <span class="notification-name" id="buyerName">Budi dari Jakarta</span> baru saja pesan template portofolio
+        </div>
+        <div class="notification-time" id="notificationTime">2 menit yang lalu</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
