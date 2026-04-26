@@ -1,8 +1,4 @@
-let currentIndex = 0;
-
-const track = document.getElementById('sliderTrack');
-const slides = document.querySelectorAll('#sliderTrack img');
-
+// COUNTDOWN TIMER
 function startCountdown() {
     const endTime = new Date().getTime() + (30 * 60 * 1000); // 30 minutes from now
     
@@ -36,8 +32,10 @@ function updateScarcity() {
         if (currentIndex < spots.length - 1) {
             currentIndex++;
             const newSpot = spots[currentIndex];
-            document.getElementById('remaining-spots').textContent = newSpot;
-            document.getElementById('final-spots').textContent = newSpot;
+            // Update semua elemen final-spots
+            document.querySelectorAll('#final-spots').forEach(el => {
+                el.textContent = newSpot;
+            });
         }
     }, Math.random() * 120000 + 60000); // Random between 1-3 minutes
 }
@@ -66,25 +64,7 @@ function showLiveNotification() {
     }, 5000);
 }
 
-// Show notification every 15-30 seconds
-setInterval(() => {
-    showLiveNotification();
-}, Math.random() * 15000 + 15000);
-
-// CTA Handler
-function handleCTA() {
-    // Replace with your actual checkout/order link
-    alert('🚀 Redirecting ke halaman checkout...\n\nGanti ini dengan link Gumroad/Tokopedia/payment gateway kamu!');
-    // window.location.href = 'YOUR_CHECKOUT_URL';
-}
-
-// Initialize on page load
-window.addEventListener('load', () => {
-    startCountdown();
-    updateScarcity();
-    setTimeout(showLiveNotification, 3000); // First notification after 3 seconds
-});
-
+// IMAGE SLIDER
 let currentSlide = 0;
 
 function moveSlide(direction) {
@@ -97,7 +77,6 @@ function moveSlide(direction) {
     if (currentSlide >= slides.length) currentSlide = slides.length - 1;
 
     const width = slides[0].clientWidth;
-
     track.style.transform = `translateX(-${currentSlide * width}px)`;
 }
 
@@ -105,3 +84,42 @@ function moveSlide(direction) {
 setInterval(() => {
     moveSlide(1);
 }, 3000);
+
+// SCROLL REVEAL ANIMATION
+function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    reveals.forEach(reveal => {
+        observer.observe(reveal);
+    });
+}
+
+// CTA HANDLER
+function handleCTA() {
+    // Replace with your actual checkout/order link
+    alert('🚀 Redirecting ke halaman checkout...\n\nGanti ini dengan link Gumroad/Tokopedia/payment gateway kamu!');
+    // window.location.href = 'YOUR_CHECKOUT_URL';
+}
+
+// INITIALIZE ON PAGE LOAD
+window.addEventListener('load', () => {
+    startCountdown();
+    updateScarcity();
+    initScrollReveal();
+    setTimeout(showLiveNotification, 3000); // First notification after 3 seconds
+});
+
+// Show notification every 15-30 seconds
+setInterval(() => {
+    showLiveNotification();
+}, Math.random() * 15000 + 15000);
